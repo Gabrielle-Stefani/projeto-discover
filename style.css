@@ -32,6 +32,7 @@ body {
     */
     /*background: color image repeat position/size*/
     background: var(--bg-url) top center/cover;
+    height: 100vh;
 }
 
 body * {
@@ -105,7 +106,7 @@ body * {
 ul {
     list-style: none;
     display: flex; /*lateral*/
-    flex-direction: column-reverse; /* colunas*/
+    flex-direction: column; /* colunas*/
     gap: 16px; /*separa os quadrinhos*/
 
     padding: 24px 0;
@@ -161,12 +162,20 @@ ul li a:hover {
 
 #social-link a:hover {
     background: rgba(255, 255, 255, 0.2);
-
-    border-radius: 50%;
 }
 
 footer {
     padding: 24px 0;
     text-align: center;
     font-size: 14px;
+}
+
+/*media queries*/
+@media (min-width: 5000px) {
+    :root {
+        --bg-url: url(./asserts/bg-descktop.jpg);
+    }
+    .light {
+        --bg-url: url(./asserts/bg-descktop-ligth.jpg);
+    }
 }
